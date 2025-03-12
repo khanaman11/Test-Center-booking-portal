@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCenter_project</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./asserts/logo.png">
+</head>
+
+<body>
+    <!-- //////////////////////////////////// create an account section start ///////////////////////////////////-->
+    <div class="create_an_account_section page active" id="page1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 border-end pe-0">
+                    <div class="left-account-box border-bottom d-flex justify-content-between align-items-center p-3 ">
+                        <div>
+                            <h3 class=" m-0">BookMyTestCenter</h3>
+                        </div>
+                        <div>
+                            <a href="#" class="btn back-to-website">Back to website <img src="./asserts/Line 204.png"
+                                    alt="right-arrow"></a>
+                        </div>
+                    </div>
+                    <div class="Create_account_section  d-flex justify-content-center align-items-center py-5">
+                        <div class="form-container">
+                            <div class="text-wrapper">
+                                <h2 class="mb-4">Welcome to BookMyTestCenter</h2>
+                                <h3>Create an account</h3>
+                                <p>You are just a few steps away, please give us your details</p>
+                            </div>
+                            <div class="form-wrapper">
+                                <input type="text" placeholder="User name" class="w-100 p-2 mb-3"><br>
+                                <input type="text" placeholder="Enter your email" class="w-100 p-2 mb-3"><br>
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <select name="" id="" class="p-2 country-code">
+                                            <option value="">Ind (+91) <img src="./asserts/Chevron down.png"
+                                                    alt="down_arrow"></option>
+                                        </select>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="number" placeholder="Enter your phone number" class="p-2 w-100">
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                                <label for="">I agree to the <span>Terms & Service & Privacy Policy</span></label>
+                                <div class="my-3">
+                                    <button class="btn w-100 bg-dark text-white" onclick="showPage(2)">Sign up <img
+                                            src="./asserts/Arrow 3.png" alt=""></button>
+                                </div>
+                                <p class="text-center">Already have an account? <a href="#" class="fw-bold text-dark"
+                                        onclick="showPage(8)">Log
+                                        in</a></p>
+                            </div>
+                            <div class="line-indicator">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 center-profile">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <div class="testimonial-box">
+                            <div class="testimonial-img-box" id="slider1"></div>
+                            <div class="testimonial-text-box"></div>
+                            <div class="text-center my-3">
+                                <h2 class="">Create your Center Profile</h2>
+                                <p>Create and showcase your center profiles to get <br> more exam bookings.</p>
+                            </div>
+                            <div class="sliderIndicator1 center-profile-indecater">
+                                <div class="active"></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //////////////////////////////////// create an account section end /////////////////////////////////////// -->
+
+
+    <!-- //////////////////////////////////// phone number section start ////////////////////////////////////// -->
+    <div class="Verify your phone number_section page" id="page2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 border-end pe-0">
+                    <div class="left-account-box border-bottom d-flex justify-content-between align-items-center p-3 ">
+                        <div>
+                            <h3 class="m-0">BookMyTestCenter</h3>
+                        </div>
+                        <div>
+                            <a href="#" class="btn back-to-website">Back to website <img src="./asserts/Line 204.png"
+                                    alt="right-arrow"></a>
+                        </div>
+                    </div>
+                    <div class="Create_phone_number  d-flex justify-content-center align-items-center ">
+                        <div class="form-container">
+                            <div class="text-wrapper">
+                                <h2 class=" mb-4">Welcome to BookMyTestCenter</h2>
+                                <h5>Verify your phone number, James</h5>
+                                <p>We sent a 6 digit OTP to <span>9922345678</span></p>
+                            </div>
+                            <div class="form-wrapper-phone-number d-flex justify-content-between align-items-center">
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div class="mt-3">
+                                <p>Didn’t get a code? <a href="#" class="">Resend</a></p>
+                                <div class="my-3">
+                                    <button class="btn w-100 bg-dark text-white" onclick="showPage(3)">Verify <img
+                                            src="./asserts/Arrow 3.png" alt=""></button>
+                                </div>
+                                <p class="text-center">Incorrect phone number? <a href="#"
+                                        class="fw-bold text-dark">Change
+                                    </a></p>
+                            </div>
+                            <div class="line-indicator">
+                                <div class="first-indicator"></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 center-profile">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <div class="testimonial-box">
+                            <div class="testimonial-img-box" id="slider2"></div>
+                            <div class="testimonial-text-box"></div>
+                            <div class="text-center my-3">
+                                <h2 class="">Create your Center Profile</h2>
+                                <p>Create and showcase your center profiles to get <br> more exam bookings.</p>
+                            </div>
+                            <div class="sliderIndicator2 center-profile-indecater">
+                                <div class="active"></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //////////////////////////////////////// phone number section end ///////////////////////////////////// -->
+
+
+    <!-- /////////////////////////// M-pin section start ////////////////////////////////////////////////////-->
+    <div class="M-Pin_section page" id="page3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 border-end pe-0">
+                    <div class="left-account-box border-bottom d-flex justify-content-between align-items-center p-3 ">
+                        <div>
+                            <h3 class="m-0">BookMyTestCenter</h3>
+                        </div>
+                        <div>
+                            <a href="#" class="btn back-to-website">Back to website <img src="./asserts/Line 204.png"
+                                    alt="right-arrow"></a>
+                        </div>
+                    </div>
+                    <div class="Create_phone_number  d-flex justify-content-center align-items-center ">
+                        <div class="form-container">
+                            <div class="text-wrapper">
+                                <h2 class=" mb-4">Welcome to BookMyTestCenter</h2>
+                                <h5>Setup your 4 digit M-Pin</h5>
+                                <p>The M-Pin will be used for logging in the future</span></p>
+                            </div>
+                            <div class="form-wrapper-M-pin d-flex justify-content-between align-items-center">
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div class="mt-3">
+                                <div class="my-3">
+                                    <button class="btn w-100 bg-dark text-white mt-3" onclick="showPage(4)">Proceed <img
+                                            src="./asserts/Arrow 3.png" alt=""></button>
+                                </div>
+                                <p class="text-center">Don’t have an account <a href="#" class="fw-bold text-dark">Sign
+                                        up
+                                    </a></p>
+                            </div>
+                            <div class="line-indicator">
+                                <div class="first-indicator"></div>
+                                <div class="first-indicator"></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 center-profile">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <div class="testimonial-box">
+                            <div class="testimonial-img-box" id="slider3"></div>
+                            <div class="testimonial-text-box"></div>
+                            <div class="text-center my-3">
+                                <h2 class="">Create your Center Profile</h2>
+                                <p>Create and showcase your center profiles to get <br> more exam bookings.</p>
+                            </div>
+                            <div class="sliderIndicator3 center-profile-indecater">
+                                <div class="active"></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ///////////////////////// M-pin section end ////////////////////////////////////////////////////// -->
+
+
+    <!-- //////////////////////////////////////// Center details section start /////////////////////////////// -->
+    <div class="center-details-section page" id="page4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-start align-items-center">
+                    <div class="p-4">
+                        <h3 class="m-0">BookMyTestCenter</h3>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-4 text-end ">
+                        <button class="btn back-to-website">Back to website <img src="./asserts/Line 204.png"
+                                alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-shadow py-3 bg-white">
+                <div class="col-2">
+                    <div class="ps-4 ">
+                        <p class="m-0 intro-tab">Hi, James Gordon</p>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p
+                                class="m-0 border py-1 px-3 d-flex justify-content-center align-items-center rounded-pill formIndicator">
+                                <img src="./asserts/Mask group.png" alt="" class="me-2">1. Center details
+                            </p>
+                            <div class="mx-2"> <img src="./asserts/Chevron right.png" alt=""></div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p
+                                class="m-0  border py-1 px-3 d-flex justify-content-center align-items-center rounded-pill formIndicator">
+                                <img src="./asserts/Profile.png" alt="" class="me-2">2. Admin details
+                            </p>
+                            <div class="mx-2"> <img src="./asserts/Chevron right.png" alt=""></div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p
+                                class="m-0  border py-1 px-3 d-flex justify-content-center align-items-center rounded-pill formIndicator">
+                                <img src="./asserts/Group.png" alt="" class="me-2">3. Infrastructure
+                            </p>
+                            <div class="mx-2"> <img src="./asserts/Chevron right.png" alt=""></div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p
+                                class="m-0  border py-1 px-3 d-flex justify-content-center align-items-center rounded-pill formIndicator">
+                                <img src="./asserts/Mask group.png" alt="" class="me-2">4. Bank details
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="text-end pe-3">
+                        <button class="need-help">Need Help?</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row formStep">
+                <div class="col-md-5 m-auto py-5">
+                    <div class="text-center">
+                        <p>Step1</p>
+                        <h2>Center details</h2>
+                        <p class="mb-5">Please enter all the details of the center</p>
+                    </div>
+                    <div class="center-details-form">
+                        <p>
+                            <label for="">What is the Center name?</label><br>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label for="">What is the center’s Postal Address?</label><br>
+                            <input type="text">
+                        </p>
+                        <p>
+                        <div class="row">
+                            <label for="">Where is your Center located?</label>
+                            <div class="col-6 mb-3">
+                                <input type="text" placeholder="Local Town">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" placeholder="Main City">
+                            </div>
+                            <div class="col-6 mb-3">
+                                <input type="text" placeholder="State">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" placeholder="Pin Code">
+                            </div>
+                        </div>
+                        </p>
+                        <p>
+                        <div class="row">
+                            <label for="">What is the Category of your Test Center?</label>
+                            <div class="col-5 mb-3">
+                                <div class="radio-container">
+                                    <label for=""> <input type="radio" name="choice">Private Center</label>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="radio-container">
+                                    <label for=""> <input type="radio" name="choice">Business/Eng. College</label>
+                                </div>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <div class="radio-container">
+                                    <label for=""> <input type="radio" name="choice">School</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="radio-container">
+                                    <label for=""> <input type="radio" name="choice">Govt.
+                                        Institutions/University</label>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+                        <p>
+                            <label for="">Any nearby Landmark</label>
+                        <div class="gst-state-code-wrapper">
+                            <input type="text" placeholder="Ex: Lal Bahadur Metro Station">
+                            <p class="m-0 px-2">Could be a Metro or Police station, a building etc.</p>
+                        </div>
+                        </p>
+                        <p>
+                        <div class="row">
+                            <label for="">Is the Lift available for Physically Handicapped Candidate?</label>
+                            <div class="col-6">
+                                <div class="radio-container">
+                                    <label for=""> <input type="radio" name="choice">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="radio-container">
+                                    <label for=""> <input type="radio" name="choice">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+                        <p>
+                            <label for="">Distance from the main Railway Station & the Name of the respective
+                                station?</label>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label for="">Distance from the nearby Bus Station & the Name of the Bus station?</label>
+                            <input type="text">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row formStep">
+                <div class="col-md-5 m-auto py-5">
+                    <div class="text-center">
+                        <p class="text-center">Step2</p>
+                        <h2>Center Administration details</h2>
+                        <p class="mb-5">Please enter the details of the points of contact at the center</p>
+                    </div>
+                    <div class="center-details-form">
+                        <div>
+                            <label for="">Point of Contact</label><br>
+                            <p>
+                                <input type="text" placeholder="Name">
+                            </p>
+                            <p>
+                                <input type="text" placeholder="Designation">
+                            </p>
+                            <p>
+                                <input type="number" placeholder="Phone number">
+                            </p>
+                            <p>
+                                <input type="number" placeholder="Alternate Phone number">
+                            </p>
+
+                            <p>
+                                <input type="email" placeholder="Email">
+                            </p>
+                        </div>
+
+                        <div>
+                            <label for="">Center Superintendent details</label>
+                            <p>
+                                <input type="text" placeholder="Name">
+                            </p>
+                            <p>
+                                <input type="number" placeholder="Phone number">
+                            </p>
+                            <p>
+                                <input type="email" placeholder="Email">
+                            </p>
+                        </div>
+                        <div>
+                            <label for="">Assistant Manager details</label>
+                            <p>
+                                <input type="text" placeholder="Name">
+                            </p>
+                            <p>
+                                <input type="text" placeholder="Phone number">
+                            </p>
+                            <p>
+                                <input type="number" placeholder="Email">
+                            </p>
+                        </div>
+                        <div>
+                            <label for="">Emergency Contact number of the Center</label>
+                            <p>
+                                <input type="number" placeholder="Phone number">
+                            </p>
+                            <p>
+                                <input type="number" placeholder="Landline number">
+                            </p>
+                        </div>
+                        <div>
+                            <label for="">Lab in charge</label>
+                            <p>
+                                <input type="number" placeholder="Phone number">
+                            </p>
+                            <p>
+                                <input type="number" placeholder="Landline number">
+                            </p>
+                            <p>
+                                <input type="number" placeholder="Email">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row formStep">
+                <div class="col-md-5 m-auto py-5">
+                    <div class="text-center">
+                        <p class="text-center">Step3</p>
+                        <h2>Exam Infrastructure details</h2>
+                        <p class="mb-5">Please enter the required information</p>
+                    </div>
+                    <div class="center-details-form">
+                        <div class="mb-5">
+                            <p>General Lab details</p>
+                            <label for="">Total number of labs</label><br>
+                            <p>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <label for="">Total number of systems</label><br>
+                            <p>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <label for="">Are all labs connected through a single network?</label><br>
+                            <p>
+                                <select name="" id="" class="network-option border">
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
+                                </select>
+                            </p>
+                            <label for="">Total networks</label><br>
+                            <p>
+                                <input type="number" placeholder="...">
+                            </p>
+                            <label for="">Is there a partition in each lab?</label><br>
+                            <p>
+                                <input type="email" placeholder="...">
+                            </p>
+                            <label for="">Is there an AC in each lab?</label><br>
+                            <p>
+                                <input type="email" placeholder="...">
+                            </p>
+                            <label for="">Is the Network Printer available?</label><br>
+                            <p>
+                                <select name="" id="" class="network-option border">
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
+                                </select>
+                            </p>
+                            <label for="">Is there a projector or sound system in each lab?</label><br>
+                            <p>
+                                <select name="" id="" class="network-option border">
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
+                                </select>
+                            </p>
+                            <label for="">Is there Fire Extinguisher in each lab?</label><br>
+                            <p>
+                                <select name="" id="" class="network-option border">
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
+                                </select>
+                            </p>
+                            <label for="">Is there a locker facility in the labs?</label><br>
+                            <p>
+                                <select name="" id="" class="network-option border">
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
+                                </select>
+                            </p>
+                            <label for="">Is there a drinking water facility in/near the labs?</label><br>
+                            <p>
+                                <select name="" id="" class="network-option border">
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div>
+                            <p>Lab Infrastructure details</p>
+                            <p>
+                                <label for="">Name of the Primary ISP</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">Primary Internet speed</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">Name of the Secondary ISP</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">Secondary ISP speed</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">Generator backup (in KVA)</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">UPS backup (KVA)</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">How many hrs/mins can the backup last for?</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">UPS backup (KVA)</label>
+                                <input type="text" placeholder="...">
+                            </p>
+                        </div>
+                        <p>Lab details</p>
+                        <div class="labNumberConatiner">
+                            <div class="mt-5 newLabWrapper">
+                                <span class="bg-dark text-white p-2 rounded-top">Lab number 1</span>
+                                <div class="lab-details-wrapper p-4 rounded bg-white mt-2">
+                                    <p>
+                                        <label for="">Floor number</label>
+                                        <input type="text" placeholder="...">
+                                    </p>
+                                    <p>
+                                        <label for="">Total number of computers?</label>
+                                        <input type="text" placeholder="...">
+                                    </p>
+                                    <p>
+                                        <label for="">Monitor type</label>
+                                        <select name="" id="" class="network-option border">
+                                            <option value="">Yes</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="">Operating system</label>
+                                        <select name="" id="" class="network-option border">
+                                            <option value="">Yes</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="">RAM (in GB)</label>
+                                        <select name="" id="" class="network-option border">
+                                            <option value="">Yes</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="">Hard Disk Drive capacity (in GB)</label>
+                                        <select name="" id="" class="network-option border">
+                                            <option value="">Yes</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="">Ethernet Switch’s company</label>
+                                        <select name="" id="" class="network-option border">
+                                            <option value="">Yes</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="">No. of ports of each Ethernet switch?</label>
+                                        <select name="" id="" class="network-option border">
+                                            <option value="">Yes</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </p>
+                                    <div class="saveBtnWrapper">
+                                        <button class="btn border-danger rounded text-danger delete-btn">Delete</button>
+                                        <button class="btn btn-success text-white save-btn saveBtn">Save</button>
+                                    </div>
+                                    <div class="editBtnWrapper d-none">
+                                        <button class="btn  Edit-btn"><img src="./asserts/edit-icon.png" alt=""
+                                                class="me-2">Edit</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button
+                                class="btn border rounded w-100 p-2 d-flex justify-content-center align-items-center bg-white addNewLab mt-3"><img
+                                    src="./asserts/Icon.png" alt="" class="me-2">Add new lab</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row formStep">
+                <div class="col-md-5 m-auto py-5">
+                    <div class="text-center">
+                        <p class="text-center">Step4</p>
+                        <h2>Bank Account details</h2>
+                        <p class="mb-5">Please enter your bank details</p>
+                    </div>
+                    <div class="center-details-form">
+                        <div>
+                            <p>
+                                <label for="">Beneficiary name</label><br>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">Name of the bank</label><br>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">Bank Account number</label><br>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">Bank IFSC code</label><br>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">PAN number</label><br>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p>
+                                <label for="">GST number</label><br>
+                                <input type="text" placeholder="...">
+                            </p>
+                            <p class="m-0">
+                                <label for="">GST State code</label><br>
+                            <div class="gst-state-code-wrapper">
+                                <input type="text" placeholder="..." class="border-top">
+                                <p class="m-0 px-2">Here’s a <a
+                                        href="https://www.iifl.com/blogs/business-loan/gst-code-list-and-jurisdiction"
+                                        target="_blank">link</a> to find your GST code: </p>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- //////////////////////////////////// prev or next button section /////////////////////////// -->
+            <div class="row bg-white py-3">
+                <div class="col-6">
+                    <div class="ps-3">
+                        <button class="btn border Previous-btn formPreviousBtn"><img src="./asserts/Arrow 3 (1).png"
+                                alt="">
+                            Previous</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="pe-3 text-end">
+                        <button class="btn border bg-dark text-white formNextBtn">Next <img
+                                src="./asserts/Arrow 3 (2).png" alt=""></button>
+                        <button class="btn border bg-dark text-white popupButton d-none" onclick="openPopup()">Next
+                            <img src="./asserts/Arrow 3 (2).png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <!-- //////////////////////////////////// prev or next button section /////////////////////////// -->
+
+        </div>
+    </div>
+    <!-- //////////////////////////////////////// Center details section end /////////////////////////////// -->
+
+
+    <!-- ///////////////////////////// Welcome back M-pin section start ////////////////////////////////// -->
+    <div class="Welcome_back M-Pin_section page" id="page8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 border-end px-0">
+                    <div class="left-account-box border-bottom d-flex justify-content-between align-items-center p-3 ">
+                        <div>
+                            <h3 class="m-0">BookMyTestCenter</h3>
+                        </div>
+                        <div>
+                            <a href="#" class="btn back-to-website">Back to website <img src="./asserts/Line 204.png"
+                                    alt="right-arrow"></a>
+                        </div>
+                    </div>
+                    <div class="Create_phone_number  d-flex justify-content-center align-items-center ">
+                        <div class="form-container">
+                            <div class="text-wrapper">
+                                <h2 class="mb-4">Welcome back</h2>
+                                <h5>Enter your 4 digit M-Pin to log in</h5>
+                                <p>Good to see you back</p>
+                            </div>
+                            <div class="form-wrapper-M-pin d-flex justify-content-between align-items-center">
+                                <input type="number" class="me-2">
+                                <input type="number" class="me-2">
+                                <input type="number" class="me-2">
+                                <input type="number">
+                            </div>
+                            <div class="mt-3">
+                                <div class="my-3">
+                                    <button class="btn w-100 bg-dark text-white mt-3" onclick="showPage(4)">Log in <img
+                                            src="./asserts/Arrow 3.png" alt=""></button>
+                                </div>
+                                <p class="text-center">Don’t have an account <a href="#" class="fw-bold text-dark">Sign
+                                        UP
+                                    </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 center-profile">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <div class="testimonial-box">
+                            <div class="testimonial-img-box" id="slider4"></div>
+                            <div class="testimonial-text-box"></div>
+                            <div class="text-center my-3">
+                                <h2 class="fs-3">Create your Center Profile</h2>
+                                <p>Create and showcase your center profiles to get <br> more exam bookings.</p>
+                            </div>
+                            <div class="sliderIndicator4 center-profile-indecater">
+                                <div class="active"></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ///////////////////////////// Welcome back M-pin section end /////////////////////////////////////-->
+
+
+    <!-- ////////////////////////////////// open pop-up ////////////////// -->
+    <!-- Pop-up (hidden by default) -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <h2>Welcome to BookMyTestCenter</h2>
+            <p>We’re extremely exited to have you as a center partner</p>
+            <a href="./booking.html" class="close-btn mb-3">Let’s get started</a>
+            <iframe width="600" height="350" src="./asserts/WhatsApp Video 2025-02-19 at 6.32.11 PM.mp4"
+                title="YouTube Video" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <!-- ////////////////////////////////// open pop-up ////////////////// -->
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

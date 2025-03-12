@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCenter_project</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./asserts/logo.png">
+</head>
+
+<body>
+
+    <!-- ///////////////////////////////////// My Bookings section start ///////////////////////////////////-->
+    <div class="My-booking-section" id="booking">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 p-0">
+                    <div class="aside-section">
+                        <div class="aside-heading">
+                            <h3 class="m-0">BookMyTestCenter</h3>
+                        </div>
+                        <ul class="aside-list">
+                            <p>Genral</p>
+                            <li>
+                                <a href="#" class="link active" onclick="openCenterBooking(0)"><img
+                                        src="./asserts/white-circle.png" alt="" class="me-2">My Bookings</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link" onclick="openCenterBooking(1)"><img
+                                        src="./asserts/Calendar.png" alt="" class="me-2">My Centers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link" onclick="openCenterBooking(2)"><img
+                                        src="./asserts/Calendar.png" alt="" class="me-2">My Calendar</a>
+                            </li>
+                            <p class="mt-3">support</p>
+                            <li>
+                                <a href="#" class="link" onclick="openCenterBooking(3)"><img
+                                        src="./asserts/setting-icon.png" alt="" class="me-2">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link" onclick="openCenterBooking(4)"><img
+                                        src="./asserts/help-icon.png" alt="" class="me-2">Help & Support</a>
+                            </li>
+                        </ul>
+                        <div class="company-wrapper">
+                            <div class="company-add">
+                                <div class="p-1">
+                                    <img src="./asserts/coffee-logo.png" alt="">
+                                </div>
+                                <div class="comp-heading p-1">
+                                    <h3 class="m-0">LTTV Group</h3>
+                                    <p class="m-0">msharma@lttv.com</p>
+                                </div>
+                                <div class="p-1">
+                                    <img src="./asserts/dout-icon.png" alt="">
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="founding">@2016 | Testpan India Private Limited</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-10 p-0 ">
+                    <div class="booking-center active">
+                        <div class="my-booking-wrapper">
+                            <div class="my-booking-header ps-4">
+                                <h2 class="m-0 fs-3">My Bookings</h2>
+                                <span>/ Booking Requests</span>
+                            </div>
+                        </div>
+                        <div class="main-contant">
+                            <div class="my-booking-tab px-4">
+                                <a href="#" class="booking-tab active" onclick="changeTab(0)">Active bookings</a>
+                                <a href="#" class="booking-tab" onclick="changeTab(1)">In Review</a>
+                                <a href="#" class="booking-tab" onclick="changeTab(2)">Confirmed Bookings</a>
+                            </div>
+                            <div class="Matrix-table-cnt center active">
+                                <div class="matrix-wrapper p-4 d-flex justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <div class="matrix-box justify-content-between">
+                                            <div><img src="./asserts/Group 1073714507.png" alt=""></div>
+                                            <div class="">
+                                                <p>Total Bookings</p>
+                                                <h2>138</h2>
+                                            </div>
+                                            <div>
+                                                <select name="" id="" class="py-1 px-2 border rounded-pill">
+                                                    <option value="">1Y</option>
+                                                    <option value="">2Y</option>
+                                                    <option value="">3Y</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="matrix-box justify-content-between mx-3">
+                                            <div><img src="./asserts/seets-books.png" alt=""></div>
+                                            <div class="">
+                                                <p>Seats booked</p>
+                                                <h2>76</h2>
+                                            </div>
+                                            <div>
+                                                <select name="" id="" class="border rounded-pill px-2 py-1">
+                                                    <option value="">55.07%</option>
+                                                    <option value="">2Y</option>
+                                                    <option value="">3Y</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-4">
+                                        <div class="matrix-box">
+                                            <div class="custom-booking-btn-box w-100">
+                                                <button class="w-100 mb-2 custom-btn" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-bookingModal">Add custom booking</button>
+                                                <button class="w-100 center-profile-btn">Edit Center profile</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper px-4">
+                                    <div class="table-container">
+                                        <div class="table-header">
+                                            <div class="table-input"><img src="./asserts/search.png" alt=""><input
+                                                    type="text" placeholder="Enter exam name.."></div>
+                                            <div>
+                                                <select name="" id="" class="p-2 me-4 border rounded">
+                                                    <option value="">Filter by</option>
+                                                    <option value="">Filter by1</option>
+                                                    <option value="">Filter by2</option>
+                                                </select>
+                                                <button class="py-2 px-3 border rounded bg-dark text-white">Export <img
+                                                        src="./asserts/Download.png" alt=""></button>
+                                            </div>
+                                        </div>
+                                        <table id="dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th> <input type="checkbox" class="me-2">Exam name</th>
+                                                    <th>From</th>
+                                                    <th>Duration</th>
+                                                    <th>Exam Date</th>
+                                                    <th>Seats</th>
+                                                    <th>Pricing </th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt=""
+                                                                class="me-2">pending</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt=""
+                                                                class="me-2">pending</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="rejected "><img
+                                                                src="./asserts/reject-icon.png" alt=""
+                                                                class="me-2">Rejected</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt=""
+                                                                class="me-2">pending</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="rejected "><img
+                                                                src="./asserts/reject-icon.png" alt=""
+                                                                class="me-2">Rejected</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Matrix-table-cnt In-Review center">
+                                <div class="matrix-wrapper p-4 d-flex justify-content-start align-items-center">
+                                    <div class="col-4">
+                                        <div class="matrix-box justify-content-between">
+                                            <div><img src="./asserts/Group 1073714507.png" alt=""></div>
+                                            <div class="">
+                                                <p>In Review</p>
+                                                <h2>58/62</h2>
+                                            </div>
+                                            <div>
+                                                <p class="py-1 px-2 border rounded-pill m-0">% 93.54%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-4">
+                                        <div class="matrix-box ms-3">
+                                            <div class="custom-booking-btn-box w-100">
+                                                <button class="w-100 mb-2 custom-btn custom-btn" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-bookingModal">Add custom booking</button>
+                                                <button class="w-100 center-profile-btn">Edit Center profile</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper px-4">
+                                    <div class="table-container">
+                                        <div class="table-header">
+                                            <div class="table-input"><img src="./asserts/search.png" alt=""><input
+                                                    type="text" placeholder="Enter exam name.."></div>
+                                            <div>
+                                                <select name="" id="" class="p-2 me-4 border rounded">
+                                                    <option value="">Filter by</option>
+                                                    <option value="">Filter by1</option>
+                                                    <option value="">Filter by2</option>
+                                                </select>
+                                                <button class="py-2 px-3 border rounded bg-dark text-white">Export <img
+                                                        src="./asserts/Download.png" alt=""></button>
+                                            </div>
+                                        </div>
+                                        <table id="dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th> <input type="checkbox" class="me-2">Exam name</th>
+                                                    <th>From</th>
+                                                    <th>Duration</th>
+                                                    <th>Exam Date</th>
+                                                    <th>Seats</th>
+                                                    <th>Pricing </th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt="" class="me-2">In
+                                                            review</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#reviewModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt="" class="me-2">In
+                                                            review</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt="" class="me-2">In
+                                                            review</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt="" class="me-2">In
+                                                            review</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="pending"><img
+                                                                src="./asserts/panding-icon.png" alt="" class="me-2">In
+                                                            review</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#bookingModa">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Matrix-table-cnt Confirmed-Bookings center">
+                                <div class="matrix-wrapper p-4 d-flex justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <div class="matrix-box justify-content-between">
+                                            <div><img src="./asserts/Group 1073714507.png" alt=""></div>
+                                            <div class="">
+                                                <p>Confirmed bookings</p>
+                                                <h2>58/62</h2>
+                                            </div>
+                                            <div>
+                                                <p class="py-1 px-2 border rounded-pill">% 6.46%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="matrix-box justify-content-between mx-3">
+                                            <div><img src="./asserts/seets-books.png" alt=""></div>
+                                            <div class="">
+                                                <p>Seats booked</p>
+                                                <h2>1385</h2>
+                                            </div>
+                                            <div>
+                                                <select name="" id="" class="border rounded-pill px-2 py-1">
+                                                    <option value="">1Y</option>
+                                                    <option value="">2Y</option>
+                                                    <option value="">3Y</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-4">
+                                        <div class="matrix-box">
+                                            <div class="custom-booking-btn-box w-100">
+                                                <button class="w-100 mb-2 custom-btn custom-btn" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-bookingModal">Add custom booking</button>
+                                                <button class="w-100 center-profile-btn">Edit Center profile</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper px-4">
+                                    <div class="table-container">
+                                        <div class="table-header">
+                                            <div class="table-input"><img src="./asserts/search.png" alt=""><input
+                                                    type="text" placeholder="Enter exam name.."></div>
+                                            <div>
+                                                <select name="" id="" class="p-2 me-4 border rounded">
+                                                    <option value="">Filter by</option>
+                                                    <option value="">Filter by1</option>
+                                                    <option value="">Filter by2</option>
+                                                </select>
+                                                <button class="py-2 px-3 border rounded bg-dark text-white">Export <img
+                                                        src="./asserts/Download.png" alt=""></button>
+                                            </div>
+                                        </div>
+                                        <table id="dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th> <input type="checkbox" class="me-2">Exam name</th>
+                                                    <th>From</th>
+                                                    <th>Duration</th>
+                                                    <th>Exam Date</th>
+                                                    <th>Seats</th>
+                                                    <th>Pricing </th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="accepted"><img
+                                                                src="./asserts/conform-icon.png" alt=""
+                                                                class="me-2">Confirmed</a></td>
+                                                    <td><a href="#" class="View-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#acceptModal">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="accepted"><img
+                                                                src="./asserts/conform-icon.png" alt=""
+                                                                class="me-2">Confirmed</a></td>
+                                                    <td><a href="#" class="View-btn">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="accepted"><img
+                                                                src="./asserts/conform-icon.png" alt=""
+                                                                class="me-2">Confirmed</a></td>
+                                                    <td><a href="#" class="View-btn">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="accepted"><img
+                                                                src="./asserts/conform-icon.png" alt=""
+                                                                class="me-2">Confirmed</a></td>
+                                                    <td><a href="#" class="View-btn">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="me-2">Bar Council</td>
+                                                    <td>Testpan India</td>
+                                                    <td>2 days</td>
+                                                    <td>Mar 3th - 4th, 2025</td>
+                                                    <td>470</td>
+                                                    <td>Rs. 60/seat</td>
+                                                    <td><a href="#" class="accepted"><img
+                                                                src="./asserts/conform-icon.png" alt=""
+                                                                class="me-2">Confirmed</a></td>
+                                                    <td><a href="#" class="View-btn">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 d-flex justify-content-between align-items-center pagination">
+                                <button class="border p-2 rounded" id="prevBtn"><img src="./asserts/Line 175.png"
+                                        alt="">Previous
+                                </button>
+                                <div id="pageBox">Page 1</div>
+                                <button class="border p-2 rounded" id="nextBtn">Next<img src="./asserts/right-arrow.png"
+                                        alt="next">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- /////////////////////////////////// Active bookings Modal start /////////////////-->
+                        <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header border-bottom pb-3">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="project-details-bg-modal">
+                                        <div class="heading p-3">
+                                            <h5 class="modal-title fw-bold">Bar Council Exam</h5>
+                                            <p class="m-0">Booking Received on <span class="text-dark fw-bold">February
+                                                    25th, 2025</span></p>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h6 class="fw-semibold">01: Project Details</h6>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Date</label>
+                                                <input type="text" class="form-control" value="Mar 3rd - 4th, 2025"
+                                                    readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Category</label>
+                                                <input type="text" class="form-control" value="Government" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam City</label>
+                                                <input type="text" class="form-control" value="Delhi" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Seats</label>
+                                                <input type="text" class="form-control" value="470" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">From</label>
+                                                <input type="text" class="form-control" value="Testpan India" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Pricing</label>
+                                                <input type="text" class="form-control" value="Rs. 60 / seat" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">02: Software & Hardware Requirements</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Mode</label>
+                                                <input type="text" class="form-control" value="Internet based" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">Computer Configuration</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Operating System</label>
+                                                <input type="text" class="form-control" value="Windows 10" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">RAM</label>
+                                                <input type="text" class="form-control" value="4 GB" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Processor</label>
+                                                <input type="text" class="form-control" value="i7, 10th Gen" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Display Resolution</label>
+                                                <input type="text" class="form-control" value="1200 x 800" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Internet on each device</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">03: Amenity Requirements</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Parking Facility</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Security Guard</label>
+                                                <input type="text" class="form-control" value="Male" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Lockers</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Waiting area</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Power Backup</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">PH Handicapped</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Printer</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Rough sheet</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Partition</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">AC in lab</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">CCTV required </label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Footage required </label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="pt-4 ps-4 pe-3 bg-white">
+                                        <button class="btn btn-danger reject-details" data-bs-toggle="modal"
+                                            data-bs-target="#rejectionModal">Reject</button>
+                                        <button class="btn btn-success accept-details">Accept</button>
+                                        <p class="text-center mt-3 fs-5">Have a question? <a href="#"
+                                                class="fs-5 text-decoration-none">Contact us</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ////////////////////////////////// Active bookings modal end ////////////////-->
+
+                        <!--/////////////////////////////// review modal start ////////////////////////-->
+                        <div class="modal right fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="text-end border-bottom p-3  bg-white">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="project-details-bg-modal p-3">
+                                        <div class="heading p-3">
+                                            <h5 class="modal-title fw-bold">Bar Council Exam</h5>
+                                            <p class="m-0">Booking Received on <span class="text-dark fw-bold">February
+                                                    25th, 2025</span></p>
+                                        </div>
+                                        <div class="p-3">
+                                            <div class="bg-white p-3 rounded">
+                                                <div class="mb-4">
+                                                    <img src="./asserts/booking-accept-icon.png" alt="">
+                                                    <span>Booking accepted on February 26th, 2025</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./asserts/booking-review-icon.png" alt="">
+                                                    <span>Booking in review. Please wait for confirmation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="modal-body">
+                                            <h2 class="fs-4">Exam Details</h2>
+                                            <p>Project details </p>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Date</label>
+                                                <input type="text" class="form-control" value="Mar 3rd - 4th, 2025"
+                                                    readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Category</label>
+                                                <input type="text" class="form-control" value="Government" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam City</label>
+                                                <input type="text" class="form-control" value="Delhi" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Seats</label>
+                                                <input type="text" class="form-control" value="470" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">From</label>
+                                                <input type="text" class="form-control" value="Testpan India" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Pricing</label>
+                                                <input type="text" class="form-control" value="Rs. 60 / seat" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">02: Software & Hardware Requirements</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Mode</label>
+                                                <input type="text" class="form-control" value="Internet based" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">Computer Configuration</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Operating System</label>
+                                                <input type="text" class="form-control" value="Windows 10" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">RAM</label>
+                                                <input type="text" class="form-control" value="4 GB" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Processor</label>
+                                                <input type="text" class="form-control" value="i7, 10th Gen" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Display Resolution</label>
+                                                <input type="text" class="form-control" value="1200 x 800" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Internet on each device</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">03: Amenity Requirements</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Parking Facility</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Security Guard</label>
+                                                <input type="text" class="form-control" value="Male" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Lockers</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Waiting area</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Power Backup</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">PH Handicapped</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Printer</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Rough sheet</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Partition</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">AC in lab</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">CCTV required </label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Footage required </label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <p class="text-center my-4">Have a question? <span
+                                                    class="text-dark fw-bold">Contact us</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--////////////////////////////////// review modal end /////////////////////////-->
+
+                        <!--/////////////////////////////// accept modal start ////////////////////////-->
+                        <div class="modal right fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="text-end border-bottom p-3  bg-white">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="project-details-bg-modal p-3">
+                                        <div class="heading p-3">
+                                            <h5 class="modal-title fw-bold">Bar Council Exam</h5>
+                                            <p class="m-0">Booking Received on <span class="text-dark fw-bold">February
+                                                    25th, 2025</span></p>
+                                        </div>
+                                        <div class="p-3">
+                                            <div class="bg-white p-3 rounded">
+                                                <div class="mb-4">
+                                                    <img src="./asserts/booking-accept-icon.png" alt="">
+                                                    <span>Booking accepted on February 26th, 2025</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./asserts/booking-accept-icon.png" alt="">
+                                                    <span>Booking confirmed on Feb 29th, 2025</span>
+                                                    <p class="ms-4 m-0">Entry added to your Calendar, <span
+                                                            class="fw-bold text-dark">Check now</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="modal-body">
+                                            <h2 class="fs-4">Exam Details</h2>
+                                            <p>Project details </p>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Date</label>
+                                                <input type="text" class="form-control" value="Mar 3rd - 4th, 2025"
+                                                    readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Category</label>
+                                                <input type="text" class="form-control" value="Government" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam City</label>
+                                                <input type="text" class="form-control" value="Delhi" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Seats</label>
+                                                <input type="text" class="form-control" value="470" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">From</label>
+                                                <input type="text" class="form-control" value="Testpan India" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Pricing</label>
+                                                <input type="text" class="form-control" value="Rs. 60 / seat" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">02: Software & Hardware Requirements</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Exam Mode</label>
+                                                <input type="text" class="form-control" value="Internet based" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">Computer Configuration</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Operating System</label>
+                                                <input type="text" class="form-control" value="Windows 10" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">RAM</label>
+                                                <input type="text" class="form-control" value="4 GB" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Processor</label>
+                                                <input type="text" class="form-control" value="i7, 10th Gen" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Display Resolution</label>
+                                                <input type="text" class="form-control" value="1200 x 800" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Internet on each device</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+
+                                            <h6 class="fw-semibold mt-4">03: Amenity Requirements</h6>
+                                            <div class="form-group">
+                                                <label class="form-label">Parking Facility</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Security Guard</label>
+                                                <input type="text" class="form-control" value="Male" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Lockers</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Waiting area</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Power Backup</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">PH Handicapped</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Printer</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Rough sheet</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Partition</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">AC in lab</label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">CCTV required </label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Footage required </label>
+                                                <input type="text" class="form-control" value="Yes" readonly>
+                                            </div>
+                                            <p class="text-center my-4">Have a question? <span
+                                                    class="text-dark fw-bold">Contact us</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--////////////////////////////////// accept modal end /////////////////////////-->
+
+                        <!-- //////////////// coustom booking modal ///////////////////////////////-->
+                        <div class="modal fade" id="add-new-bookingModal" tabindex="-1"
+                            aria-labelledby="add-new-bookingModal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down">
+                                <div class="modal-content">
+                                    <div class="modal-header d-block border-bottom-0">
+                                        <div class="close-btn-wrapper p-3 text-end">
+                                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="">
+                                            <div class="text-center">
+                                                <img src="./asserts/plus-icon.png" alt="plus-icon">
+                                            </div>
+                                            <div class="text-center">
+                                                <h3 class="modal-title my-3" id="add-new-bookingModal">Add a new booking
+                                                </h3>
+                                                <p>Please enter the following details to create a booking.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Client details.</p>
+                                        <!-- Client Details -->
+                                        <div class="Client-detail-box">
+                                            <p>
+                                                <label>Client name</label>
+                                                <input type="text" class="form-control mb-2" placeholder="...">
+                                            </p>
+                                            <p>
+                                                <label for="">Client email</label>
+                                                <input type="email" class="form-control mb-2" placeholder="...">
+                                            </p>
+                                            <p>
+                                                <label for="">Client Phone number</label>
+                                                <input type="text" class="form-control mb-3" placeholder="...">
+                                            </p>
+                                        </div>
+                                        <!-- Exam Details -->
+                                        <p class="mt-3">Exam details.</p>
+                                        <div class="Client-detail-box">
+                                            <p>
+                                                <label for="">Exam name</label>
+                                                <input type="text" class="form-control mb-2" placeholder="...">
+                                            </p>
+                                            <p>
+                                                <label>Exam type</label>
+                                                <select class="form-select mb-2">
+                                                    <option selected>Select an option</option>
+                                                    <option>Exam Type 1</option>
+                                                    <option>Exam Type 2</option>
+                                                </select>
+                                            </p>
+                                            <p>
+                                                <label for="">Exam location</label>
+                                                <input type="text" class="form-control mb-2" placeholder="...">
+                                            </p>
+                                            <p>
+                                                <label for="">Exam date</label>
+                                                <input type="date" class="form-control mb-2">
+                                            </p>
+                                            <p>
+                                                <label for="">Exam duration (in days)</label>
+                                                <input type="number" class="form-control mb-2"
+                                                    placeholder="Exam duration in days">
+                                            </p>
+                                            <p>
+                                                <label for="">Exam time</label>
+                                                <input type="time" class="form-control mb-3">
+                                            </p>
+                                        </div>
+                                        <!-- Booking Details -->
+                                        <p class="mt-3">Booking details</p>
+                                        <div class="Client-detail-box">
+                                            <p>
+                                                <label for="">Seats booked</label>
+                                                <input type="number" class="form-control mb-2"
+                                                    placeholder="Seats booked">
+                                            </p>
+                                            <p>
+                                                <label for="">Labs assignedLabs assigned</label>
+                                                <select class="form-select mb-3">
+                                                    <option selected>Select 1 or more labs</option>
+                                                    <option>Lab 1</option>
+                                                    <option>Lab 2</option>
+                                                </select>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer border-top-0">
+                                        <button type="button" class="btn btn-dark w-100">Confirm booking</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //////////////  coustom booking modal /////////////////////////////////////////-->
+
+                        <!--///////////////// rejection modal start /////////////////////////////-->
+                        <div class="modal fade" id="rejectionModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content p-4">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title">Please give us a reason for rejection</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-muted">We use your responses to understand what went wrong from
+                                            our end, so that we can fix it the next time.</p>
+                                        <p class="fw-bold">Select all that apply</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="reason1">
+                                            <label class="form-check-label" for="reason1">Price is not up to the mark
+                                                <strong>Negotiate?</strong></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="reason2">
+                                            <label class="form-check-label" for="reason2">No of seats do not
+                                                match</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="reason3">
+                                            <label class="form-check-label" for="reason3">Technical requirements do not
+                                                match</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="reason4">
+                                            <label class="form-check-label" for="reason4">Change in
+                                                infrastructure</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="reason5">
+                                            <label class="form-check-label" for="reason5">My reason is not listed
+                                                here</label>
+                                        </div>
+                                        <textarea class="form-control mt-3 w-100" rows="5"
+                                            placeholder="Please explain here..."></textarea>
+                                    </div>
+                                    <div class="modal-footer border-0 d-flex justify-content-between">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Go
+                                            back</button>
+                                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                            data-bs-target="#areYouSureModal">Submit →</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//////////////////////////// rejection modal end /////////////////////////-->
+
+                        <!--///////////////////////// Are You Sure Modal start /////////////////////////-->
+                        <div class="modal fade right" id="areYouSureModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content p-4">
+                                    <div class="border-bottom d-flex justify-content-end p-3">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-header d-block">
+                                        <h5 class="modal-title fw-bold">Are you sure?</h5>
+                                        <p class="text-muted">This action cannot be undone</p>
+                                    </div>
+
+                                    <div class="modal-footer border-0 d-flex justify-content-between">
+                                        <button type="button" class="btn btn-outline-dark"
+                                            data-bs-dismiss="modal">Recheck</button>
+                                        <button type="button" class="btn btn-danger">Yes, reject →</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--////////////////////////////  Are You Sure Modal end /////////////////////////-->
+                    </div>
+                    <div class="booking-center my-centers-section">
+                        <div class="my-booking-wrapper d-flex justify-content-between align-items-center">
+                            <div class="my-booking-header ps-4">
+                                <h2 class="m-0 fs-3">My Bookings</h2>
+                                <span>/ Booking Requests</span>
+                            </div>
+                            <div class="pe-4">
+                                <button class="btn btn-dark text-white"><img src="./asserts/edit-btn.png" alt=""
+                                        class="me-2">Edit Center</button>
+                            </div>
+                        </div>
+                        <div class="my-center-wrapper">
+                            <div class="container py-4">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card border">
+                                            <div class="mb-3">
+                                                <img src="./asserts/center-img.png" alt="">
+                                            </div>
+                                            <h4 class="mb-3">Zyprus Ltd.</h4>
+                                            <p class="text-muted">This centrally located Delhi test center is equipped
+                                                with
+                                                advanced CCTV and modern computer systems for secure, efficient exam
+                                                conduction.</p>
+                                            <hr>
+                                            <p class="d-flex justify-content-between location">
+                                                <strong>Location:</strong>
+                                                <span class="text-primary text-dark">Neon Tower, Block 2, Delhi
+                                                    110086</span>
+                                            </p>
+                                            <p class="d-flex justify-content-between"><strong>Seating:</strong> 1540</p>
+                                            <p class="d-flex justify-content-between"><strong>Audited:</strong> <span
+                                                    class="badge Audited-btn">Yes</span></p>
+                                            <p class="d-flex justify-content-between"><strong>Available:</strong> <span
+                                                    class="badge Available-btn">Yes</span></p>
+                                            <hr>
+                                            <div class="d-flex justify-content-between align-items-center audit-cnt">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="me-2">
+                                                        <img src="./asserts/audit-img.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="m-0">Audit report</h5>
+                                                        <p class="m-0">Last audited on Oct 10th, 2024</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="btn border rounded">View</button>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center audit-cnt">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="me-2">
+                                                        <img src="./asserts/location-icon.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="m-0">Zyprus Ltd.</h5>
+                                                        <p class="m-0">Neon Tower, Block 2, Delhi 2020</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="btn border rounded">View</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 ">
+                                        <div class="card bg-transparent">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <h5 class="m-0">Center images</h5>
+                                                <button class="btn border rounded"> <img src="./asserts/Plus.png"
+                                                        alt="">Add
+                                                    new</button>
+                                            </div>
+                                            <div class="d-flex center-images gap-2 flex-wrap justify-content-between">
+                                                <img src="./asserts/center-1.png" alt="Center Image">
+                                                <img src="./asserts/center-2.png" alt="Center Image">
+                                                <img src="./asserts/center-3.png" alt="Center Image">
+                                                <img src="./asserts/center-4.png" alt="Center Image">
+                                                <img src="./asserts/center-5.png" alt="Center Image">
+                                                <img src="./asserts/center-6.png" alt="Center Image">
+                                                <img src="./asserts/center-7.png" alt="Center Image">
+                                            </div>
+                                            <small class="text-muted my-3">Last updated on 05/03/2025</small>
+                                            <hr>
+                                        </div>
+
+                                        <div class="card bg-transparent">
+                                            <h5>Center details</h5>
+                                            <div class="accordion" id="accordionDetails">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#centerDetails">
+                                                            Center details
+                                                        </button>
+                                                    </h2>
+                                                    <div id="centerDetails" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionDetails">
+                                                        <div class="accordion-body">
+                                                            <div class="row">
+                                                                <div class="col-md-5 m-auto py-2 w-100">
+
+                                                                    <div class="center-details-form">
+                                                                        <p>
+                                                                            <label for="">What is the Center
+                                                                                name?</label><br>
+                                                                            <input type="text">
+                                                                        </p>
+                                                                        <p>
+                                                                            <label for="">What is the center’s Postal
+                                                                                Address?</label><br>
+                                                                            <input type="text">
+                                                                        </p>
+                                                                        <p>
+                                                                        <div class="row">
+                                                                            <label for="">Where is your Center
+                                                                                located?</label>
+                                                                            <div class="col-6 mb-3">
+                                                                                <input type="text"
+                                                                                    placeholder="Local Town">
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <input type="text"
+                                                                                    placeholder="Main City">
+                                                                            </div>
+                                                                            <div class="col-6 mb-3">
+                                                                                <input type="text" placeholder="State">
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <input type="text"
+                                                                                    placeholder="Pin Code">
+                                                                            </div>
+                                                                        </div>
+                                                                        </p>
+                                                                        <p>
+                                                                        <div class="row">
+                                                                            <label for="">What is the Category of your
+                                                                                Test Center?</label>
+                                                                            <div class="col-5 mb-3">
+                                                                                <div class="radio-container">
+                                                                                    <label for=""> <input type="radio"
+                                                                                            name="choice">Private
+                                                                                        Center</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-7">
+                                                                                <div class="radio-container">
+                                                                                    <label for=""> <input type="radio"
+                                                                                            name="choice">Business/Eng.
+                                                                                        College</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-4 mb-3">
+                                                                                <div class="radio-container">
+                                                                                    <label for=""> <input type="radio"
+                                                                                            name="choice">School</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-8">
+                                                                                <div class="radio-container">
+                                                                                    <label for=""> <input type="radio"
+                                                                                            name="choice">Govt.
+                                                                                        Institutions/University</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </p>
+                                                                        <p>
+                                                                            <label for="">Any nearby Landmark</label>
+                                                                        <div class="gst-state-code-wrapper">
+                                                                            <input type="text"
+                                                                                placeholder="Ex: Lal Bahadur Metro Station">
+                                                                            <p class="m-0 px-2">Could be a Metro or
+                                                                                Police station, a building etc.</p>
+                                                                        </div>
+                                                                        </p>
+                                                                        <p>
+                                                                        <div class="row">
+                                                                            <label for="">Is the Lift available for
+                                                                                Physically Handicapped
+                                                                                Candidate?</label>
+                                                                            <div class="col-6">
+                                                                                <div class="radio-container">
+                                                                                    <label for=""> <input type="radio"
+                                                                                            name="choice">Yes</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <div class="radio-container">
+                                                                                    <label for=""> <input type="radio"
+                                                                                            name="choice">No</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </p>
+                                                                        <p>
+                                                                            <label for="">Distance from the main Railway
+                                                                                Station & the Name of the respective
+                                                                                station?</label>
+                                                                            <input type="text">
+                                                                        </p>
+                                                                        <p>
+                                                                            <label for="">Distance from the nearby Bus
+                                                                                Station & the Name of the Bus
+                                                                                station?</label>
+                                                                            <input type="text">
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#adminDetails">
+                                                            Admin details
+                                                        </button>
+                                                    </h2>
+                                                    <div id="adminDetails" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionDetails">
+                                                        <div class="accordion-body">
+                                                            <div class="row">
+                                                                <div class="col-md-5 m-auto py-2 w-100">
+                                                                    <div class="center-details-form">
+                                                                        <div>
+                                                                            <label for="">Point of Contact</label><br>
+                                                                            <p>
+                                                                                <input type="text" placeholder="Name">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="text"
+                                                                                    placeholder="Designation">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Phone number">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Alternate Phone number">
+                                                                            </p>
+
+                                                                            <p>
+                                                                                <input type="email" placeholder="Email">
+                                                                            </p>
+                                                                        </div>
+
+                                                                        <div>
+                                                                            <label for="">Center Superintendent
+                                                                                details</label>
+                                                                            <p>
+                                                                                <input type="text" placeholder="Name">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Phone number">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="email" placeholder="Email">
+                                                                            </p>
+                                                                        </div>
+                                                                        <div>
+                                                                            <label for="">Assistant Manager
+                                                                                details</label>
+                                                                            <p>
+                                                                                <input type="text" placeholder="Name">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="text"
+                                                                                    placeholder="Phone number">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Email">
+                                                                            </p>
+                                                                        </div>
+                                                                        <div>
+                                                                            <label for="">Emergency Contact number of
+                                                                                the Center</label>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Phone number">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Landline number">
+                                                                            </p>
+                                                                        </div>
+                                                                        <div>
+                                                                            <label for="">Lab in charge</label>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Phone number">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Landline number">
+                                                                            </p>
+                                                                            <p>
+                                                                                <input type="number"
+                                                                                    placeholder="Email">
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#infraDetails">
+                                                            Infrastructure details
+                                                        </button>
+                                                    </h2>
+                                                    <div id="infraDetails" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionDetails">
+                                                        <div class="accordion-body">
+                                                            <div class="row ">
+                                                                <div class="col-md-5 m-auto py-2 w-100">
+                                                                    <div class="center-details-form">
+                                                                        <div class="mb-5">
+                                                                            <p>General Lab details</p>
+                                                                            <label for="">Total number of
+                                                                                labs</label><br>
+                                                                            <p>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <label for="">Total number of
+                                                                                systems</label><br>
+                                                                            <p>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <label for="">Are all labs connected through
+                                                                                a single network?</label><br>
+                                                                            <p>
+                                                                                <select name="" id=""
+                                                                                    class="network-option border">
+                                                                                    <option value="">Yes</option>
+                                                                                    <option value="">No</option>
+                                                                                </select>
+                                                                            </p>
+                                                                            <label for="">Total networks</label><br>
+                                                                            <p>
+                                                                                <input type="number" placeholder="...">
+                                                                            </p>
+                                                                            <label for="">Is there a partition in each
+                                                                                lab?</label><br>
+                                                                            <p>
+                                                                                <input type="email" placeholder="...">
+                                                                            </p>
+                                                                            <label for="">Is there an AC in each
+                                                                                lab?</label><br>
+                                                                            <p>
+                                                                                <input type="email" placeholder="...">
+                                                                            </p>
+                                                                            <label for="">Is the Network Printer
+                                                                                available?</label><br>
+                                                                            <p>
+                                                                                <select name="" id=""
+                                                                                    class="network-option border">
+                                                                                    <option value="">Yes</option>
+                                                                                    <option value="">No</option>
+                                                                                </select>
+                                                                            </p>
+                                                                            <label for="">Is there a projector or sound
+                                                                                system in each lab?</label><br>
+                                                                            <p>
+                                                                                <select name="" id=""
+                                                                                    class="network-option border">
+                                                                                    <option value="">Yes</option>
+                                                                                    <option value="">No</option>
+                                                                                </select>
+                                                                            </p>
+                                                                            <label for="">Is there Fire Extinguisher in
+                                                                                each lab?</label><br>
+                                                                            <p>
+                                                                                <select name="" id=""
+                                                                                    class="network-option border">
+                                                                                    <option value="">Yes</option>
+                                                                                    <option value="">No</option>
+                                                                                </select>
+                                                                            </p>
+                                                                            <label for="">Is there a locker facility in
+                                                                                the labs?</label><br>
+                                                                            <p>
+                                                                                <select name="" id=""
+                                                                                    class="network-option border">
+                                                                                    <option value="">Yes</option>
+                                                                                    <option value="">No</option>
+                                                                                </select>
+                                                                            </p>
+                                                                            <label for="">Is there a drinking water
+                                                                                facility in/near the labs?</label><br>
+                                                                            <p>
+                                                                                <select name="" id=""
+                                                                                    class="network-option border">
+                                                                                    <option value="">Yes</option>
+                                                                                    <option value="">No</option>
+                                                                                </select>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div>
+                                                                            <p>Lab Infrastructure details</p>
+                                                                            <p>
+                                                                                <label for="">Name of the Primary
+                                                                                    ISP</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">Primary Internet
+                                                                                    speed</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">Name of the Secondary
+                                                                                    ISP</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">Secondary ISP
+                                                                                    speed</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">Generator backup (in
+                                                                                    KVA)</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">UPS backup (KVA)</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">How many hrs/mins can the
+                                                                                    backup last for?</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">UPS backup (KVA)</label>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                        </div>
+                                                                        <p>Lab details</p>
+                                                                        <div class="labNumberConatiner">
+                                                                            <div class="mt-5 newLabWrapper">
+                                                                                <span class="bg-dark text-white p-2 rounded-top">Lab number 1</span>
+                                                                                <div class="lab-details-wrapper p-4 rounded bg-white mt-2">
+                                                                                    <p>
+                                                                                        <label for="">Floor number</label>
+                                                                                        <input type="text" placeholder="...">
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <label for="">Total number of computers?</label>
+                                                                                        <input type="text" placeholder="...">
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <label for="">Monitor type</label>
+                                                                                        <select name="" id="" class="network-option border">
+                                                                                            <option value="">Yes</option>
+                                                                                            <option value="">No</option>
+                                                                                        </select>
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <label for="">Operating system</label>
+                                                                                        <select name="" id="" class="network-option border">
+                                                                                            <option value="">Yes</option>
+                                                                                            <option value="">No</option>
+                                                                                        </select>
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <label for="">RAM (in GB)</label>
+                                                                                        <select name="" id="" class="network-option border">
+                                                                                            <option value="">Yes</option>
+                                                                                            <option value="">No</option>
+                                                                                        </select>
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <label for="">Hard Disk Drive capacity (in GB)</label>
+                                                                                        <select name="" id="" class="network-option border">
+                                                                                            <option value="">Yes</option>
+                                                                                            <option value="">No</option>
+                                                                                        </select>
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <label for="">Ethernet Switch’s company</label>
+                                                                                        <select name="" id="" class="network-option border">
+                                                                                            <option value="">Yes</option>
+                                                                                            <option value="">No</option>
+                                                                                        </select>
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <label for="">No. of ports of each Ethernet switch?</label>
+                                                                                        <select name="" id="" class="network-option border">
+                                                                                            <option value="">Yes</option>
+                                                                                            <option value="">No</option>
+                                                                                        </select>
+                                                                                    </p>
+                                                                                    <div class="saveBtnWrapper">
+                                                                                        <button class="btn border-danger rounded text-danger delete-btn">Delete</button>
+                                                                                        <button class="btn btn-success text-white save-btn saveBtn">Save</button>
+                                                                                    </div>
+                                                                                    <div class="editBtnWrapper d-none">
+                                                                                        <button class="btn  Edit-btn"><img src="./asserts/edit-icon.png" alt=""
+                                                                                                class="me-2">Edit</button>
+                                                                                    </div>
+                                                
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <button
+                                                                            class="btn border rounded w-100 p-2 d-flex justify-content-center align-items-center bg-white addNewLab mt-3"><img
+                                                                                src="./asserts/Icon.png" alt=""
+                                                                                class="me-2">Add new lab</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#bankDetails">
+                                                            Bank details
+                                                        </button>
+                                                    </h2>
+                                                    <div id="bankDetails" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionDetails">
+                                                        <div class="accordion-body">
+                                                            <div class="row">
+                                                                <div class="col-md-5 m-auto py-2 w-100">
+                                                                    <div class="center-details-form">
+                                                                        <div>
+                                                                            <p>
+                                                                                <label for="">Beneficiary
+                                                                                    name</label><br>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">Name of the
+                                                                                    bank</label><br>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">Bank Account
+                                                                                    number</label><br>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">Bank IFSC code</label><br>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">PAN number</label><br>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p>
+                                                                                <label for="">GST number</label><br>
+                                                                                <input type="text" placeholder="...">
+                                                                            </p>
+                                                                            <p class="m-0">
+                                                                                <label for="">GST State code</label><br>
+                                                                            <div class="gst-state-code-wrapper">
+                                                                                <input type="text" placeholder="..."
+                                                                                    class="border-top">
+                                                                                <p class="m-0 px-2">Here’s a <a
+                                                                                        href="https://www.iifl.com/blogs/business-loan/gst-code-list-and-jurisdiction"
+                                                                                        target="_blank">link</a> to find
+                                                                                    your GST code: </p>
+                                                                            </div>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-center w-100 calender-section">
+                        <div class="my-booking-wrapper">
+                            <div class="my-booking-header px-4">
+                                <h2 class="m-0 fs-3">My Calendar</h2>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="col-8">
+                                <div class="d-flex justify-content-between align-items-center p-4">
+                                    <div>
+                                        <select name="" id="" class="border-0 fs-4">
+                                            <option value="">March 3rd, 2025 </option>
+                                            <option value="">April 3rd, 2025 </option>
+                                            <option value="">May 3rd, 2025 </option>
+                                        </select>
+                                        <p class="m-0">Tuesday</p>
+                                    </div>
+                                    <div><button class="btn btn-dark fs-6">Add new booking</button></div>
+                                </div>
+                                <div class="p-4">
+                                    <table class="calender-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sun</th>
+                                                <th>Mon</th>
+                                                <th>Tue</th>
+                                                <th>Wed</th>
+                                                <th>Thu</th>
+                                                <th>Fri</th>
+                                                <th>Sat</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td class="date-day">3</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                                <td>19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                            </tr>
+                                            <tr>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td class="date-day">25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td>31</td>
+                                                <td class="next-month">Apr 1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="event-aside">
+                                    <div>
+                                        <h3>Events</h3>
+                                        <p>Exam Scheduled for the day</p>
+                                    </div>
+                                    <div class="bg-white p-3 exam-seats-box ">
+                                        <p>PAN India Bar Council exam</p>
+                                        <h3>1400 seats</h3>
+                                        <hr>
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div>Date</div>
+                                            <div>March 3rd, 2025</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div>Client</div>
+                                            <div>Testpan India</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div>Duration</div>
+                                            <div>day</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div>Timings</div>
+                                            <div>9:00 AM - 1:00 PM</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div>Status</div>
+                                            <div class="exam-status">Exam pending</div>
+                                        </div>
+                                        <hr>
+                                        <div class="text-center">
+                                            <button class="btn border-secondary w-100">View booking details</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-center Settings-section">
+                        <h2>Settings</h2>
+                    </div>
+                    <div class="booking-center help-section">
+                        <h2>Help-Supports</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ///////////////////////////////////// My Bookings section end -->
+
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
