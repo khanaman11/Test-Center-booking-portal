@@ -48,17 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const inputs = document.querySelectorAll(".form-wrapper-M-pin input");
 
   inputs.forEach((input, index) => {
-      input.addEventListener("input", function () {
-          if (this.value.length === 1 && index < inputs.length - 1) {
-              inputs[index + 1].focus();
-          }
-      });
+    input.addEventListener("input", function () {
+      if (this.value.length === 1 && index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
+    });
 
-      input.addEventListener("keydown", function (event) {
-          if (event.key === "Backspace" && this.value.length === 0 && index > 0) {
-              inputs[index - 1].focus();
-          }
-      });
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Backspace" && this.value.length === 0 && index > 0) {
+        inputs[index - 1].focus();
+      }
+    });
   });
 });
 
@@ -68,40 +68,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // /////////////////////////// pagination of table script start /////////////////////
 document.addEventListener("DOMContentLoaded", function () {
-  let table = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
-  let rows = table.getElementsByTagName("tr");
-  let rowsPerPage = 2; // Ek page par kitni rows dikhani hai
-  let currentPage = 1;
+  document.querySelectorAll(".paginationCnt").forEach(function (paginationContainer) {
+    let table = paginationContainer.querySelector(".dataTable tbody");
+    let rows = table.getElementsByTagName("tr");
+    let rowsPerPage = 2; // Change as needed
+    let currentPage = 1;
 
-  function showPage(page) {
-    let start = (page - 1) * rowsPerPage;
-    let end = start + rowsPerPage;
+    function showPage(page) {
+      let start = (page - 1) * rowsPerPage;
+      let end = start + rowsPerPage;
 
-    for (let i = 0; i < rows.length; i++) {
-      rows[i].style.display = i >= start && i < end ? "table-row" : "none";
+      for (let i = 0; i < rows.length; i++) {
+        rows[i].style.display = i >= start && i < end ? "table-row" : "none";
+      }
+
+      paginationContainer.querySelector(".pageBox").innerText = `Page ${currentPage}`;
+      paginationContainer.querySelector(".prevBtn").disabled = currentPage === 1;
+      paginationContainer.querySelector(".nextBtn").disabled = currentPage === Math.ceil(rows.length / rowsPerPage);
     }
 
-    document.getElementById("pageBox").innerText = `Page ${currentPage}`;
-    document.getElementById("prevBtn").disabled = currentPage === 1;
-    document.getElementById("nextBtn").disabled = currentPage === Math.ceil(rows.length / rowsPerPage);
-  }
+    paginationContainer.querySelector(".prevBtn").addEventListener("click", function () {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
 
-  document.getElementById("prevBtn").addEventListener("click", function () {
-    if (currentPage > 1) {
-      currentPage--;
-      showPage(currentPage);
-    }
+    paginationContainer.querySelector(".nextBtn").addEventListener("click", function () {
+      if (currentPage < Math.ceil(rows.length / rowsPerPage)) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    showPage(currentPage);
   });
-
-  document.getElementById("nextBtn").addEventListener("click", function () {
-    if (currentPage < Math.ceil(rows.length / rowsPerPage)) {
-      currentPage++;
-      showPage(currentPage);
-    }
-  });
-
-  showPage(currentPage);
 });
+
 // /////////////////////////// pagination of table script end ////////////////////////
 
 
@@ -128,6 +131,9 @@ function createSlider(sliderId, images, indicatorClass) {
   const indicators = document.querySelectorAll(`${indicatorClass} div`);
   let index = 0;
   function changeSlide() {
+    if (!slider) {
+      return;
+    }
     slider.style.backgroundImage = `url('${images[index]}')`;
     indicators.forEach(ind => ind.classList.remove("active"));
     indicators[index].classList.add("active");

@@ -19,6 +19,9 @@ h3 {
     color: #000000;
 
 }
+h5{
+    font-size: 18px !important;
+}
 
 p {
 
@@ -26,6 +29,12 @@ p {
     font-size: 16px !important;
     color: #737373;
 
+}
+strong{
+    font-size: 16px !important;
+}
+span{
+    font-size: 16px !important;
 }
 
 a {
@@ -307,7 +316,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: block !important;
 }
 
-/* //////////////////////////////////// center details style end   ///////////////////////////////////////// */
+/* //////////////////////////////////// center details style end  ///////////////////////////////////////// */
 
 
 /* ///////////////////////////////// Exam Infrastructure details section style start /////////////////////////*/
@@ -445,7 +454,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .company-wrapper {
     position: absolute;
     bottom: 0px;
-    padding: 10px;
+    padding: 10px 14px;
 }
 
 .company-add {
@@ -454,6 +463,7 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
+    padding: 8px;
 }
 
 .founding {
@@ -462,11 +472,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .comp-heading h3 {
-    font-size: 10px;
+    font-size: 16px !important;
 }
 
 .comp-heading p {
-    font-size: 10px;
+    font-size: 14px !important;
 }
 
 .my-booking-wrapper {
@@ -623,6 +633,7 @@ th {
 .center.active {
     display: block;
 }
+
 
 /*////////////////////////////////////// my booking style end //////////////////////////////////*/
 
@@ -825,6 +836,9 @@ th {
 /*///////////////////////////////////////////// sure modal //////////////////////////*/
 
 /* //////////////////////////////////////////// My centers section style start /////////////////// */
+.center-img-box{
+    margin-bottom: 20px;
+}
 .card {
     border-radius: 10px;
     padding: 20px;
@@ -833,6 +847,9 @@ th {
 }
 .badge {
     font-size: 14px;
+}
+.last-update{
+    margin: 20px 0px 4px 0px;
 }
 .center-images img {
     width: 100px;
@@ -844,8 +861,9 @@ th {
     background-color: #fff !important;
     font-weight: bold;
     color: #000 !important;
-    border: 1px solid #DDDDDD; 
-   
+    border: 1px solid #DDDDDD;
+    border-radius: 0 0 16px 16px; 
+     
 }
 
 .accordion-button:not(.collapsed) {
@@ -853,10 +871,12 @@ th {
 }
 .accordion-item {
     border: none;
-    border-radius: 20px !important;
     margin-bottom: 10px !important;
-     
+    margin-top: 20px;
+    background-color: transparent; 
+    
 }
+
 .location{
     font-size: 14px !important;
 }
@@ -872,5 +892,12 @@ th {
 }
 .my-center-wrapper{
     background-color: #f9f9f9;
+   
+}
+.accordion-button{
+    border-radius:15px 15px 0 0 !important;
+}
+.accordion-button.collapsed{
+    border-radius: 15px !important;
 }
 /* //////////////////////////////////////////// My centers section style end ///////////////////// */
