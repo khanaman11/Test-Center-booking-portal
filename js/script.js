@@ -266,6 +266,35 @@ function openCenterBooking(index) {
 // /////////////////////////// Aside script end ///////////////////////
 
 
+// /////////////////////////// Center edit section script start ///////////////////////////
+const editProfile = ()=>{
+  let editCenter = document.getElementById("edit-center");
+  let centerProfile = document.getElementById("center-Profile");
+  let editBtnCnt = document.getElementById("editBtnCnt");
+  let editCenterBtn = document.getElementById("edit-center-btn-cnt")
+  
+  editCenter.style.display="block";
+  centerProfile.style.display ="none";
+  editBtnCnt.style.display = "block";
+  editCenterBtn.style.display = "none";
+}
+
+const getSave = ()=>{
+  let editCenter = document.getElementById("edit-center");
+  let centerProfile = document.getElementById("center-Profile");
+  let editBtnCnt = document.getElementById("editBtnCnt");
+  let editCenterBtn = document.getElementById("edit-center-btn-cnt");
+  
+  editCenter.style.display="none";
+  centerProfile.style.display ="block";
+  editBtnCnt.style.display = "none";
+  editCenterBtn.style.display = "block";
+
+}
+// /////////////////////////// Center edit section script end ///////////////////////////
+
+
+
 
 
 
