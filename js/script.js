@@ -220,21 +220,26 @@ updateSteps(); // Initialize the form state
 
 // add lab js
 
-const addNewLabBtn = document.querySelectorAll(".addNewLab");
-const newLabWrapper = document.querySelector(".newLabWrapper");
+const addNewLabBtns = document.querySelectorAll(".addNewLab");
+const newLabWrappers = document.querySelectorAll(".newLabWrapper");
 const saveBtn = document.querySelector(".saveBtn");
-const editBtn = document.querySelector(".newLabWrapper");
 const editBtnWrapper = document.querySelector(".editBtnWrapper");
 const saveBtnWrapper = document.querySelector(".saveBtnWrapper");
-addNewLabBtn.forEach(btn => {
+
+addNewLabBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    newLabWrapper.classList.add("show");
+    if (newLabWrappers[index]) {
+      newLabWrappers[index].classList.add("show");
+    }
   });
 });
-saveBtn.addEventListener("click", () => {
-  editBtnWrapper.classList.remove("d-none")
-  saveBtnWrapper.classList.add("d-none")
-})
+
+if (saveBtn && editBtnWrapper && saveBtnWrapper) {
+  saveBtn.addEventListener("click", () => {
+    editBtnWrapper.classList.remove("d-none");
+    saveBtnWrapper.classList.add("d-none");
+  });
+}
 
 
 // //////////////////// my-booking section start///////////////////

@@ -908,8 +908,8 @@ th {
 .delete-img-btn{
     width: 30px;
     height: 30px;
-    top: 37%;
-    left: 14%;
+    right: 8px;
+    bottom: 8px;
     position: absolute;
 }
 .delete-img-btn img{
