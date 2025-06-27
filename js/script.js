@@ -272,31 +272,69 @@ function openCenterBooking(index) {
 
 
 // /////////////////////////// Center edit section script start ///////////////////////////
-const editProfile = ()=>{
+const editProfile = () => {
   let editCenter = document.getElementById("edit-center");
   let centerProfile = document.getElementById("center-Profile");
   let editBtnCnt = document.getElementById("editBtnCnt");
   let editCenterBtn = document.getElementById("edit-center-btn-cnt")
-  
-  editCenter.style.display="block";
-  centerProfile.style.display ="none";
+
+  editCenter.style.display = "block";
+  centerProfile.style.display = "none";
   editBtnCnt.style.display = "block";
   editCenterBtn.style.display = "none";
 }
 
-const getSave = ()=>{
+const getSave = () => {
   let editCenter = document.getElementById("edit-center");
   let centerProfile = document.getElementById("center-Profile");
   let editBtnCnt = document.getElementById("editBtnCnt");
   let editCenterBtn = document.getElementById("edit-center-btn-cnt");
-  
-  editCenter.style.display="none";
-  centerProfile.style.display ="block";
+
+  editCenter.style.display = "none";
+  centerProfile.style.display = "block";
   editBtnCnt.style.display = "none";
   editCenterBtn.style.display = "block";
 
 }
 // /////////////////////////// Center edit section script end ///////////////////////////
+
+
+
+
+// ///////////////////////// Event aside script start ///////////////////////////////////
+const dateCells = document.querySelectorAll('.calender-table td');
+const eventAside = document.getElementById('eventAside');
+
+// Step 2: Add click listener on each date cell
+dateCells.forEach(cell => {
+  cell.addEventListener('click', () => {
+    // Remove d-none class to show the event aside
+    eventAside.classList.remove('d-none');
+
+    // Optional: Highlight the clicked cell
+    dateCells.forEach(c => c.classList.remove('date-day')); // remove from all
+    cell.classList.add('date-day'); // add to clicked one
+
+    // Optional: Update content dynamically (example below)
+    const selectedDate = cell.textContent.trim();
+    const dateText = document.querySelector('.event-aside .exam-seats-box div:nth-child(2)');
+    if (dateText) {
+      dateText.innerText = "March " + selectedDate + ", 2025";
+    }
+  });
+});
+
+
+// ///////////////////////// Event aside script end ///////////////////////////////////
+
+
+// close events-aside script
+document.addEventListener('click', function (e) {
+  if (!eventAside.contains(e.target) && !e.target.closest('td')) {
+    eventAside.classList.add('d-none');
+  }
+});
+
 
 
 
